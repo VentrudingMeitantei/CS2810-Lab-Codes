@@ -178,9 +178,9 @@ int main() {
         }
 
         else if (query == 3) {
-            vector<Card*> v = CO.getLIS();
-            cout << v.size() << endl;
-            for (auto x: v) {
+            vector<Card*> lis = card_organizer.getLIS();
+            cout << lis.size() << endl;
+            for (auto x: lis) {
                 *x << cout << '\n';
             }
         }
