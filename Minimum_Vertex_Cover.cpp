@@ -11,7 +11,7 @@ class Sentinel {
         int id, ir;
         string name, rank;
     public:
-        virtual int countHigherRanked() = 0; //this counts the number of sentinels ranked higher than a given sentinel, it's abstract here
+        virtual int countHigherRanked() = 0; //counts the number of sentinels ranked higher than a given sentinel, it's abstract here
         int getIR() { //returns the integer equivelent of rank
             return ir;
         }
