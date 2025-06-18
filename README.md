@@ -21,3 +21,9 @@ This repository contains C++ implementations of various algorithms developed as 
   - Finding Longest Hamiltonian Path in a Weighted Graph using Bitmasks  
   - Weighted Interval Scheduling Problem  
   - Finding Minimum Vertex Cover
+ 
+- More Graph Algorithms
+  - Topological Sort (Kahn's Algorithm)
+  - Strongly Connected Components (Kosaraju's Algorithm)
+
+
