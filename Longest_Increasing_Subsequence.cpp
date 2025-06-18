@@ -85,14 +85,14 @@ class CardOrganizer {
         void addCard(Card* c); //Finds a suitable pile and inserts the card in it.
         size_t getPileCount(); //Returns the number of piles created so far.
         vector<Card*> getLIS(); //Returns a valid LIS based on pile tops.
-        int lb(Card* c, vector<Card*> v); //this finds this first card whose strengh is greater than or equal to the strength of c in the vector
+        int lwr_bound(Card* c, vector<Card*> v); //this finds this first card whose strengh is greater than or equal to the strength of c in the vector
 };      
 
 void CardOrganizer::addCard(Card* c) {
     cards.push_back(c);
     pre.push_back(-1);
     int i = cards.size() - 1;
-    int x = lb(c, piles);
+    int x = lwr_bound(c, piles);
     if (x == piles.size()) {
         piles.push_back(cards[i]);
         tails.push_back(i);
@@ -123,7 +123,7 @@ vector<Card*> CardOrganizer::getLIS() {
     return fin;
 }
 
-int CardOrganizer::lb(Card* c, vector<Card*> v) {
+int CardOrganizer::lwr_bound(Card* c, vector<Card*> v) {
     int n = v.size();
     int l = 0, r = n;
     while (l < r) {
@@ -138,7 +138,7 @@ int main() {
     int q;
     cin >> q;
 
-    CardOrganizer CO;
+    CardOrganizer card_organizer;
 
     for (int i = 0; i < q; i++) {
         int query;
@@ -153,7 +153,7 @@ int main() {
                 cin >> side;
 
                 Square* temp = new Square(side);
-                CO.addCard(temp);
+                card_organizer.addCard(temp);
             }
 
             else if (s == "RECTANGLE") {
@@ -161,7 +161,7 @@ int main() {
                 cin >> l >> b;
 
                 Rectangle* temp = new Rectangle(l, b);
-                CO.addCard(temp);
+                card_organizer.addCard(temp);
             }
 
             else if (s == "TRIANGLE") {
@@ -169,12 +169,12 @@ int main() {
                 cin >> b >> h;
 
                 Triangle* temp = new Triangle(b, h);
-                CO.addCard(temp);
+                card_organizer.addCard(temp);
             }
         }
 
         else if (query == 2) {
-            cout << CO.getPileCount() << "\n";
+            cout << card_organizer.getPileCount() << "\n";
         }
 
         else if (query == 3) {
