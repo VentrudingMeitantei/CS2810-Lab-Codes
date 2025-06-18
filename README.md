@@ -26,6 +26,6 @@ This repository contains C++ implementations of various algorithms developed as 
   - Topological Sort (Kahn's Algorithm)
   - Strongly Connected Components (Kosaraju's Algorithm)
 
-Note: These are not direct codes, rather these algorithms are implemented for a solving a scenario mentioned in the lab problem statements (which aren't provided here).
+Note: These are not direct codes, rather these algorithms are implemented for solving a scenario mentioned in the lab problem statements (which aren't provided here) and hence have variable names and class names that might seem out of place.
 
 
