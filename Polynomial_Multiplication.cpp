@@ -5,7 +5,7 @@
 #include <ios>
 using namespace std;
 
-string conc(string& s, int a) {
+string conc(string& s, int a) { //concatenates s a-times
     string temp;
     for (int i = 0; i < a; i++) {
         temp += s;
@@ -141,6 +141,7 @@ T Solve<T>::sol(Polynomial<T>& P, int a) {
 }
 //functions for Multiply
 template <typename T>
+//Karatsuba Multiplication
 vector<T> Multiply<T>::mult(vector<T>& v1, vector<T>& v2) {
     int n = v1.size();
     if (n == 1) { //at each level v1 and v2 have the same size
