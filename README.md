@@ -11,7 +11,7 @@ This repository contains C++ implementations of various algorithms developed as 
   - Counting Inversions  
   - Finding Closest Pair of Points  
   - Quick Sort  
-  - Polynomial Multiplication using Karatsuba's Algorithm
+  - Polynomial Multiplication (Karatsuba's Algorithm)
 
 - Greedy Algorithms  
   - Longest Increasing Subsequence  
